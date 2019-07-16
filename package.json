@@ -1,0 +1,27 @@
+{
+  "name": "curso_fau",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lib": "^4.0.2",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "csv-parser": "^2.3.0",
+    "csv-writer": "^1.4.0",
+    "fs": "0.0.1-security",
+    "http-serve": "^1.0.1",
+    "npm": "^6.10.1",
+    "read-excel-file": "^4.0.1",
+    "request": "^2.88.0",
+    "require": "^2.4.20"
+  },
+  "description": ""
+}

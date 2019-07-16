@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <!-- CSS Requerido por Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- CSS para dar tamaño al mapa -->
+    <style>
+        #myMap{
+            height: 1000px;
+        }
+    </style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="../../assets/css/highlight.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <title>Poblacion</title>
+ 
+  </head>
+  <blockquote class="blockquote text-center">
+      <h1 class="display-2">Población de la Región de Tarapacá</h1> 
+    </blockquote>
+  <body>
+       
+      <div class="container">
+          <div class="row">
+            <div class="col-sm">        
+                <h3 class="text-center">Ficha Comunal</h3>
+              <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">COMUNA</th>
+                      <th scope="col">MUJERES</th>
+                      <th scope="col">HOMBRES</th>
+                      <th scope="col">TOTAL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">ALTO HOSPICIO</th>
+                      <td>54169</td>
+                      <td>54206</td>
+                      <td>108375</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">HUARA</th>
+                      <td>1229</td>
+                      <td>1501</td>
+                      <td>2730</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">IQUIQUE</th>
+                      <td>95571</td>
+                      <td>94897</td>
+                      <td>191468</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">POZO ALMONTE</th>
+                      <td>6724</td>
+                      <td>8987</td>
+                      <td>15711</td>
+                      </tr>
+                    <tr>
+                      <th scope="row">CAMIÑA</th>
+                      <td>593</td>
+                      <td>657</td>
+                      <td>1250</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">COLCHANE</th>
+                      <td>733</td>
+                      <td>995</td>
+                      <td>1728</td>
+                    </tr>
+                      <tr>
+                      <th scope="row">PICA</th>
+                      <td>2746</td>
+                      <td>6550</td>
+                      <td>9296</td>
+                      </tr>
+                  </tbody>
+                </table>
+
+                <div class="content-demo">
+                    <div class="container">
+                        <div class="intro">
+                            <h3 class="text-center">Gráfico de Población</h3>
+                        </div>
+                        <div class="intro">
+                            <canvas id="myChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+            <div class="col-sm">
+
+                <div class="content-demo">
+                    <div class="container">
+                        <div class="intro">
+                            <h2 class="text-center">Mapa Comunal</h2>
+                        </div>
+                        <div class="intro">
+                            <div id="myMap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+<footer>
+        <div class="container-fluid">
+            <div class="row small py-2 bg-dark text-light">
+                <div class="col-sm-6 py-3">Curso Progrmacion y Visualizacion de datos geograficos - FAU</div>
+                <div class="col-sm-6 py-3 text-md-right">Nicolas Bettini - 2019</div>
+            </div>
+        </div>
+</footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="mapa.js"></script>
+   <script src="grafica.js"></script>
+   <script src="mapa.json"></script> 
+  </body>
+</html>
